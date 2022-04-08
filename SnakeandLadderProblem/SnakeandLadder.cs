@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SnakeandLadderProblem
 {
-    internal class SnakeandLadder
+    public class SnakeandLadder
     {
-    }
+        int position = 0;
+    }  
 }
