@@ -42,7 +42,7 @@ namespace SnakeandLadderProblem
                         }
                         break;
                 }
-            
+                Console.WriteLine(this.position);
             }
         }
     }
