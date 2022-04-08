@@ -18,16 +18,26 @@ namespace SnakeandLadderProblem
         }
         public void Game()
         {
-            Random random = new Random();
-            int option = random.Next(0,3);
-            switch (option)
+            while (this.position < 100)
             {
-                case NO_PLAY:
-                    break;
-                case SNAKE:this.position -= this.DieRoll();
-                    break;
-                case LADDER:this.position += this.DieRoll();
-                    break;
+                Random random = new Random();
+                int option = random.Next(0, 3);
+                switch (option)
+                {
+                    case NO_PLAY:
+                        break;
+                    case SNAKE:
+                        this.position -= this.DieRoll();
+                        if (this.position < 0)
+                        {
+                            this.position = 0;
+                        }
+                        break;
+                    case LADDER:
+                        this.position += this.DieRoll();
+                        break;
+                }
+            
             }
         }
     }
